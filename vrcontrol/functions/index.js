@@ -39,7 +39,7 @@ exports.nunchuk = functions.pubsub
 function updateCurrentDataFirebase(message) {
 	 var d = new Date();
  var timeInMillis = d.getTime();
-return db.ref(`/devices/${timeInMillis}`).set({
+return db.ref(`/devices/`).push({
 	accelX: message.accelX,
     accelY: message.accelY,
 	accelZ: message.accelZ
